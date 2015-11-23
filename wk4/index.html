@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Albert Martinez | FWF - Research</title>
+
+<!--	<link rel="stylesheet" href="css/reset.css">-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- Include KnockoutJS library -->
+	<script src="js/knockout.js"></script>
+	
+	
+	
+</head>
+<body ng-app="app" ng-controller="MainController">
+	<header>
+		<div id="logo">
+			<h1>My KnowckoutJS Example</h1>
+		</div>
+	</header>
+	<div id="main">
+		<div class="container">
+			<div class="ccard">
+				<h2>Hello, <span data-bind="text:userName">todo</span></h2>
+<p>As of today, <em>according to you</em>, you are: <span data-bind="text:userAge">todo</span> years old... Really?</p>
+				<div class="ccard form">
+					<form>
+						<!-- This is a *view* - HTML markup that defines the appearance of your UI -->
+
+<p>Name: <input id="userName" type="text" data-bind="value: userName"/></p>
+<p>Age:  <input id="userAge" type="text" data-bind="value: userAge" /></p>
+<p>Full Info:  <span data-bind="text: fullName"></span></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<p>© 2015 Albert Martinez</p>
+	</footer>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Custom JS -->
+	<script src="js/app.js"></script>
+</body>
+
+</html>

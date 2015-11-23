@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Albert Martinez | FWF - Employee Directory</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/angular.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body ng-controller="Ctrlr">
+
+	<header>
+		<h1><span class="top">Employee </span> <span class="btm"> Directory</span></h1>
+	</header>
+
+	<div id="main">
+		<div id='add-workers' class="container">
+			<form id="wForm" name="workerForm" ng-submit="submitForm()" novalidate>
+				<h2>Add employees</h2>
+				<h3>General Contact Info</h3>
+
+<!--				<div class="form-input" ng-class="{ 'has-error' : workerForm.name.$dirty && workerForm.name.$invalid }">-->
+					<label for="name">Name</label>
+					<input type="text" ng-model="newWorker.name" placeholder="Name" name="name" id="name" ng-class="{ 'has-error' : workerForm.name.$dirty && workerForm.name.$invalid }">required>
+					<p ng-show="workerForm.name.$dirty && workerForm.name.$invalid && $rootscope">Your name is required.</p>
+<!--				</div>-->
+
+				<div class="form-input" ng-class="{ 'has-error' : workerForm.position.$dirty && workerForm.position.$invalid }">
+					<label for="position">Position</label>
+					<input type="text" ng-model="newWorker.position" placeholder="i.e.: UX Design Engineer" name="position" id="position" required>
+					<p ng-show="workerForm.position.$dirty && workerForm.position.$invalid">Your position in the company is required.</p>
+				</div>
+
+				<div class="form-input" ng-class="{ 'has-error' : workerForm.email.$dirty && workerForm.email.$invalid}">
+					<label for="email">Email</label>
+					<input type="email" ng-model="newWorker.email" placeholder="i.e.: example@myemail.com..." name="email" id="email" required>
+					<p ng-show="workerForm.email.$dirty && workerForm.email.$invalid">Enter a valid email.</p>
+				</div>
+
+				<div class="form-input" ng-class="{ 'has-error' : workerForm.mobile.$dirty && workerForm.mobile.$invalid }">
+					<label for="mobile">Mobile:</label>
+					<input type="text" ng-model="newWorker.mobile" placeholder="i.e.: 315.568.9077..." name="mobile" id="mobile" required>
+					<p ng-show="workerForm.mobile.$dirty && workerForm.mobile.$invalid">Enter a valid telephone number.</p>
+				</div>
+				<button type="submit" ng-disabled="workerForm.$invalid" ng-click="addWorker()">Submit</button>
+
+			</form>
+		</div>
+		<div id='view-workers' class="container">
+			<h2>View employees</h2>
+
+			<div class="item" ng-repeat="worker in workers track by $index">
+				<button ng-click="fireWorkers($index)">x</button>
+				<h4 class='worker name'>{{ worker.name }}</h4>
+				<h5 class='worker position'>{{ worker.position }}</h5>
+				<p class='worker email'><img class="icon email" src="img/email-icon.png"> {{ worker.email }}</p>
+				<p class='worker mobile'><img class="icon mobile" src="img/mobile-icon.png"> {{ worker.mobile }}</p>
+			</div>
+			<button type="button" ng-click="clear()">Clear</button>
+		</div>
+
+	</div>
+	<footer>
+		<p>© 2015 Albert Martinez</p>
+	</footer>
+	<script src="js/app.js"></script>
+	<script src="js/service.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<h2>My Goals</h2>
+<!-- C create -->
+<div class="title">
+	<h3>Define your ambitions</h3>
+</div>
+<div class='form'>
+	<form>
+		<label for='goal'>New goal: </label>
+		<input type="text" name="goal" id="goal" ng-model="goal">
+		<input type="submit" ng-click="addGoal()" value='Add my goal'>
+	</form>
+</div>
+<div class='list goalList'>
+	<h3>Working on: </h3>
+	<div class="item">
+		<ul>
+			<li ng-repeat="gls in goalsA track by $index"><a href="#" ng-click="forgetGoal($index)">x</a> {{ gls }}
+			</li>
+		</ul>
+	</div>
+	<button type="button" ng-click="clear()">Clear</button>
+</div>

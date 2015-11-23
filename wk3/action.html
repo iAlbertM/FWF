@@ -1,0 +1,50 @@
+<h2>My Actions</h2>
+
+<div class="title">
+	<h3>Take action towards your dreams</h3>
+</div>
+
+<div class='form'>
+	<form id="aForm" name="aForm">
+		<ul>
+			<li>
+				<label for="action">My fitness goal: </label>
+				<input id="action" type="text" ng-model="newAction.action" placeholder="i.e., walk after dinner" name="action" required>
+			</li>
+
+			<li>
+				<label for='format'>I plan on working on this goal every: </label>
+				<select id="format" ng-model='newAction.format' name='format'>
+					<option value="day">day</option>
+					<option value="week" selected>week</option>
+					<option value="month">month</option>
+					<option value="year">year</option>
+				</select>
+			</li>
+			<li>
+				<label for="num">My priority for this goal on a scale of 0-10 (1 being #1 prioroty) is:  </label>
+				<input id="num" type="number" ng-model="newAction.num" placeholder="ex:" min='0' max='10' name="num" required>
+				
+			</li>
+
+			<li>
+				<label for="done">Goal Completion by:</label>
+				<input id="done" type="date" ng-model="newAction.done" name="done" required>
+			</li>
+			
+		</ul>
+			<input type="submit" ng-click="addAction()"  name="submit"
+			value="Add action">
+	</form>
+</div>
+<div class="list actionList">
+	<h3>I aim to... : </h3>
+	<div class='item'>
+		<ul>
+
+			<li ng-repeat="act in actions track by $index"><span class="priorityNum">{{act.num}}</span> <a href='#' ng-click="forgetAction(act.$index)">x</a> <span class="action">{{ act.action }}</span> I will push myself every <span class="format"> {{ act.format }} </span> to accomplish my goal by: <span class="done">{{ act.done }}</span></li>
+		</ul>
+		<button type="button" ng-click="clear()">Clear</button>
+	</div>
+	
+</div>

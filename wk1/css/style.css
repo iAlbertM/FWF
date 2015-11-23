@@ -1,0 +1,258 @@
+html { 
+	font-size: 62.5%;
+	background-color: rgb(40, 60, 62);
+}
+
+body {
+	font: normal 1em/1.4 "Roboto Condensed", "Roboto", sans-serif;
+	padding: 1rem 1.5rem;
+}
+
+h1,
+h2,
+p + p {
+	font-family: "Roboto Condensed", "Roboto", sans-serif;
+	color: rgba(248, 249, 145, 100);
+}
+
+h1 { 
+	text-align: center;
+	font-size: 4.9rem;
+	color: #cddc39;
+	text-transform: uppercase;
+	margin: 2rem 0 5rem;
+	font-weight: 900;
+}
+
+p + p { 
+	line-height: 1;
+	padding: 0;
+	color: rgb(170, 175, 124);
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+/* BUTTONS + INPUTS */
+button,
+input {
+	color: inherit;
+	font: inherit;
+	margin: auto;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button,
+input[type=submit] {
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	transition: background .25s ease-in-out;
+	padding: 0;
+	border: none;
+}
+
+button {
+	opacity: 0;
+	background-color:rgba(61, 49, 91, 100);
+	float: right;
+	width: 3rem;
+	height: 3rem;
+	font-size: 1rem;
+}
+
+li:hover button {
+	border-radius: 100px;
+	opacity: 1;
+	color: #000;
+	background-color: #fff;
+	opacity: 0.7;
+	transition:all .30s ease-in;
+}
+
+input {
+	font-size: 1.6rem;
+	margin: 1rem auto;
+	width: 100%;
+	display: block;
+}
+
+input[type=submit] {
+	text-transform: uppercase;
+	border-radius: .8rem;
+	outline: 0;
+	padding: 1rem;
+	margin: 1rem auto;
+	line-height: 2;
+	background-color: #cddc39;
+}
+
+input[type=submit]:hover {
+	transition: background .25s ease-in-out;
+	background-color: rgba(205, 220, 57, 0.6);
+}
+
+input::-webkit-input-placeholder {
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input::-moz-placeholder {
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input:-moz-placeholder {   /* Older versions of Firefox */
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input:-ms-input-placeholder { 
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input[type=text] {
+	outline: 0;
+	border: 1px solid lightgray;
+	border-radius: 10rem;
+	font-size: 1.6rem;
+	padding: .5rem 1.5rem;
+}
+
+input[type=text]:focus {
+	outline: 0;
+	box-shadow: 0 0 2px 1px #00bcd4;
+}
+
+/* LISTS */
+ul {
+	background: rgba(205, 220, 57, 0.21);
+	border-radius: .5rem;
+	display: block;
+	margin-top: 5rem;
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+	overflow: visible;
+}
+
+li {
+	color: rgba(248, 249, 145, 100);
+	padding: 2rem 1.6rem;
+	border-bottom: 1px solid rgba(205, 220, 57, 0.59);
+	display:block;
+	box-shadow: 0px 0px 10px -3px rgba(248, 249, 145, 100);
+}
+
+li:last-child { border-bottom: none; }
+
+li:not(button) { font-size: 1.8rem; }
+
+footer {
+	margin: 2rem auto;
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 1rem;
+	
+}
+
+
+
+@media (min-width: 600px) {
+	body {
+		max-width: 640px;
+		margin: auto;
+	}
+	
+	header,
+	main {
+		max-width: 40rem;
+		margin: auto;
+	}
+	
+	h1,
+	p + p {
+		padding: 1rem 0;
+		margin: 1rem 0;
+	}
+	
+	h1 { 
+		font-size: 4.5rem;
+		font-family: 'lemon';
+		
+	}
+
+	p + p { 
+		font-size: 1.2rem;
+		line-height: 1;
+		padding: 0;
+		margin-left: 1rem;
+	}
+	
+	button,
+	input[type=submit] {
+		text-align: center;
+		padding: 0;
+		border-radius: .1rem;
+	}
+
+	button {
+		margin: .5rem;
+		width: 2rem;
+		height: 2rem;
+		font-size: 1rem;
+	}
+	
+	input {
+		display: inline;
+		width: auto;
+	}
+	
+	input[type=text] {
+		vertical-align: middle;
+		font-size: 1.2rem;
+		padding: 0.5ren 0;
+		width: 100%;
+	}
+
+	input[type=submit] {
+		float: right;
+		margin-left: 1rem;
+		vertical-align: middle;
+		padding: 0 1rem;
+		font-size: 1.4rem;
+		background: rgb(171, 185, 33);
+		border: 2px solid rgba(205, 220, 57, 0.6);
+		outline: 0;
+	}
+
+	input[type=submit]:hover {
+		transition: background .2s ease-out;
+		background: rgba(171, 185, 57, 0.6);
+	}
+	
+	ul {
+		margin: 10rem auto 4rem;
+		box-shadow: 0 0 25px rgba(205, 209, 255, 0.4);
+/*		border: 1px groove rgba(255, 255, 255,0.25);*/
+		
+	}
+	
+	ul li {
+		vertical-align: middle;
+		padding: 1rem .5rem 1rem 1.5rem;
+	}
+
+	footer {
+		margin: 2rem auto;
+		text-align: center;
+		font-size: 1.2rem;
+		padding: 1rem;
+		color: #ccc;
+	}
+}

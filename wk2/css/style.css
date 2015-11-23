@@ -1,0 +1,411 @@
+/*5. Application is Professionally Styled*/
+
+
+html {
+	font-size: 62.5%; 
+	background: #f7f5ed;
+}
+
+body {
+	font: normal 1em/1.4 "Roboto Condensed", "Roboto", sans-serif;
+}
+
+h1,
+h2,
+p {
+	font-family: "Roboto Condensed", "Roboto", sans-serif;
+	color: #596b7b;
+}
+
+h1 { 
+	font-size: 3.8rem;
+	word-spacing: 1rem;
+	letter-spacing: 0.1rem;
+	text-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 900;
+	line-height: 1;
+	text-align: center;
+}
+
+h1 span.top {
+	font-size: 5.9rem;
+	letter-spacing: 0.4rem;
+	font-weight: 100;
+}
+
+h1 span.btm {
+	letter-spacing: 1rem;
+}
+
+h2 {
+	font-size: 2.9rem;
+	color: #74473a;
+	text-transform: uppercase;
+	font-weight: 100;
+	border-bottom: 3px dotted #d2b48c;
+	width: 98%;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 2;
+	color: rgba(116, 71, 58, 0.8);
+}
+
+/* HEADER */
+header {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: #00bcd4;
+	border-bottom: 2px solid #0d9aac;
+	margin-bottom: 1px;
+}
+
+/* MAIN */
+#main {
+	border-top: 2px solid rgba(198, 198, 198, 0.8);
+	background-color: rgba(255, 255, 255, 0.87);
+	
+}
+
+#add-workers h3 {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+
+
+
+/* BUTTONS */
+button,
+input {
+	color: inherit;
+	font: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button[type] {
+	cursor: pointer;
+	color: #fff;
+	background-color: rgba(73, 106, 139, 0.86);
+	font-size: 1rem;
+	line-height: 0.25;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem;
+	margin: 2rem 1rem;
+	outline: 0;
+	border: none;
+	border-radius: 0.25rem;
+	width: 15%;
+	float: right;	
+	transition: background .25s ease-in-out;
+}
+
+button:hover {
+	transition: background .25s ease-in-out;
+}
+button[type=submit] {
+	background-color: #ffeb00;
+	width: 25%;
+	padding: 1.5rem;
+	color: gray;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 1.2rem;
+	border: 1px dotted #d0bf00;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+button[type=submit]:hover {
+	background-color: rgb(224, 206, 0);
+}
+
+button[type=button] {
+	background-color: #ffffff;
+	color: lightgray
+}
+button[type=button]:hover {
+	background-color: #f44336;
+	border: 1px dotted lightgray;
+} 
+
+
+/* INPUT & LABELS */
+
+label {
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	font-weight: 100;
+	color: rgba(116, 71, 58, 0.8);	
+}
+
+input {
+	font-size: 1.2rem;
+	line-height: normal;
+	width: 100%;
+	display: block;
+	outline: 0;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	padding: 0.5rem 0;
+}
+
+.form-input {
+	margin: 1rem auto 1.2rem auto;
+	padding: 0 1rem;
+}
+
+input::-webkit-input-placeholder {
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input::-moz-placeholder {
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input:-moz-placeholder {   /* Older versions of Firefox */
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input:-ms-input-placeholder { 
+	opacity: 0.5;
+	font-style: italic;
+}
+
+input:focus {
+	outline: 0;
+	box-shadow: 0 0 2px 1px #00bcd4;
+}
+
+
+/* EMPLOYEES */
+
+#add-workers {
+	margin-bottom: 5rem;
+	width: 100%;
+	padding: 1rem;
+}
+#add-workers form {
+	display: block;
+	padding-bottom: 2rem;
+	margin-bottom: 50%;
+}
+#view-workers {
+	display: block;
+	width: 90%;
+	margin: auto;
+	position: absolute;
+}
+.item {
+	width: 100%;
+	position: relative;
+	padding: 0 0 2rem 0;
+	border: 1px solid rgba(152, 152, 152, 0.52);
+	box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.item h4 {
+	background-color: rgba(186, 161, 132, 0.31);
+	color: rgba(152, 133, 107, 0.8);
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 1rem;
+	border-bottom: 1px dotted #989898;
+}
+
+.item h5 {
+	text-align: center;
+} 
+
+.item img {
+	width:12px;
+	height: auto;
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+}
+
+.item button {
+		position: absolute;
+}
+
+#view-workers {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: space-around;	
+}
+
+#view-workers .item {
+	width: 90%;
+	order: 0;
+	flex: auto;
+	align-self: auto;
+	
+}
+
+
+/* FOOTER */
+footer {
+	margin: 2rem auto;
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 30%;
+}
+
+
+/*
+ Responsive styles
+*/
+@media (min-width: 800px) {
+	#main {
+		display: flex;
+		flex-direction: row;
+/*		flex-wrap: nowrap;*/
+/*		justify-content: space-around;*/
+		align-items: flex-start;
+		width: 50%;
+		max-width: 400px;
+		min-height: 100%;
+	}
+	
+	#add-workers {
+		flex: auto;
+		margin: 2rem;
+	}
+	
+	#view-workers {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items:flex-start;
+		align-content: space-around;
+		width:auto;
+	}
+
+	#view-workers .item {
+		width: 25%;
+		flex:auto;
+		flex-wrap: wrap;
+		align-self: auto;
+		padding: 1rem 0;
+		margin: 0.5rem;
+		border-bottom: 1px solid rgba(128,128,128, 1);
+		display: inline-block;
+		vertical-align:text-top;
+	}
+	
+	#add-workers form {
+		margin-left: 2rem;
+	}
+	
+	#view-workers p {
+		font-weight: 100;
+		font-size: 1.4rem;
+		line-height: normal;
+		margin: 0;
+		padding: 0.5rem;
+		text-overflow: ellipsis;
+	}
+	header {
+		padding: 0;
+		width: 100%;
+		min-height: 60px;
+	}
+	
+	h1 span.top, h1 span.btm {
+		font-size: 2rem;
+		text-align: left;
+		text-shadow: none;
+		letter-spacing: 0.25rem;
+		word-spacing: 0;
+	}
+	
+	h1 {
+		float:left;
+		width: 600px;
+		margin-left: 2rem;
+		word-spacing: 1rem;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-weight: 900;
+		line-height: 1;
+		text-align: left;
+	}
+
+	
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 100;
+		line-height: 2;
+		border-top: 1px solid black;
+	}
+	
+	h4 {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	
+	#view-workers .item p { 
+		font-size: 1rem;
+		text-overflow: ellipsis;
+	}
+	
+	
+	
+	form p {
+		display: inline-block;
+		margin: -5rem auto 2rem auto;
+		padding: 0;
+		color: #f43636;
+	}
+	
+	form label {
+		margin: 0;
+		padding: 0;
+		float: left;
+		width: 12%;
+		text-transform: lowercase;
+		font-variant:small-caps;
+		color: rgba(47, 47, 47, 0.8);
+		font-family: 'Source Sans Pro';
+		font-weight: 600;
+	}
+	
+	input {
+		font-size: 1.2rem;
+		width: 100%;
+		margin: 1rem;
+	}
+
+	button[type=submit] {
+		font-size: 1.4rem;
+	}
+		
+	
+
+
+	
+	footer {
+		margin: 2rem auto;
+		text-align: center;
+		font-size: 1.2rem;
+		padding: 1rem;
+		color: #ccc;
+	}
+}

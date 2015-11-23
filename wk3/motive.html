@@ -1,0 +1,31 @@
+<header>
+	<h2>My Fitness Goals</h2>
+</header>
+
+<!-- form to add motives regarding user's goals-->
+<section>
+<div class="form container">
+	<form id="motiveForm" name="motiveForm">
+		<h3>Discover your drive</h3>
+		<div class="form-input" ng-class="{ 'has-error' : motiveForm.motive.$dirty && motiveForm.motive.$invalid }">
+			<label for="motive">What is your motive: </label>
+			<input type="text" ng-model="motive" placeholder="My love of self determination" name="motive" id="motive" required>
+		</div>
+		<button type="submit" ng-disabled="motiveForm.$invalid" ng-click="addMotive()">Submit</button>
+
+	</form>
+</div>
+</section>
+
+<!-- List of user responses-->
+<section>
+	<div class="list motive-list" ng-show='motives.length'>
+		<h3>What drives me... :</h3>
+		<div class="item">
+			<ul>
+				<li ng-repeat='fit in motives track by $index'><a href='' ng-click="lostMotive($index)">x</a> {{ fit }} </li>
+			</ul>
+		</div>
+		<button type="button" ng-click="clear()">Clear</button>
+	</div>
+</section>
